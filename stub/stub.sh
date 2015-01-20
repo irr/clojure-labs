@@ -1,6 +1,4 @@
 #!/bin/sh
-# sample: 
-# cat stub.sh helloworld.jar > hello.run && chmod +x helloworld.run
 MYSELF=`which "$0" 2>/dev/null`
 [ $? -gt 0 -a -f "$0" ] && MYSELF="./$0"
 java=java
