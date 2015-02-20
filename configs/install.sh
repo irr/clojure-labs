@@ -5,7 +5,7 @@ cd /opt/java/github
 git clone https://github.com/clojure/clojure.git
 cd clojure
 git checkout gh-pages
-cd..
+cd ..
 git clone git@github.com:irr/ClojureProgramming.git
 cd ClojureProgramming
 git remote add upstream https://github.com/clojurebook/ClojureProgramming.git
