@@ -6,6 +6,11 @@ git clone https://github.com/clojure/clojure.git
 cd clojure
 git checkout gh-pages
 cd ..
+git clone git@github.com:irr/vim-clojure-static.git
+cd vim-clojure-static
+git remote add upstream https://github.com/guns/vim-clojure-static.git
+git fetch upstream && git merge upstream/master && git push
+cd ..
 git clone git@github.com:irr/ClojureProgramming.git
 cd ClojureProgramming
 git remote add upstream https://github.com/clojurebook/ClojureProgramming.git
@@ -21,7 +26,14 @@ cd http-kit
 git remote add upstream https://github.com/http-kit/http-kit.git
 git fetch upstream && git merge upstream/master && git push
 cd ~/gitf
+ln -s /opt/java/github/vim-clojure-static
 ln -s /opt/java/github/ClojureProgramming
 ln -s /opt/java/github/programming-clojure
 ln -s /opt/java/github/http-kit
+cd
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd ~/.vim/bundle
+rm -rf vim-clojure-static; ln -s /opt/java/github/vim-clojure-static
+cd
 
