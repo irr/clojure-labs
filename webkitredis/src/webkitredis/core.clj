@@ -11,7 +11,8 @@
 (defn app [req]
     {:status  200
      :headers {"Content-Type" "application/json"}     
-     :body    (json-str {"crypt-bytearray" (c/encrypt (wcar* (car/ping)) "abcdefghijklmnop")})})
+     ;;:body    (json-str {"crypt-bytearray" (c/encrypt (wcar* (car/ping)) "abcdefghijklmnop")})})
+     :body    (json-str {"ping" (wcar* (car/ping))})})
 
 (defn -main [& args]
     (run-server app {:port 8080}))
