@@ -16,11 +16,6 @@ cd ClojureProgramming
 git remote add upstream https://github.com/clojurebook/ClojureProgramming.git
 git fetch upstream && git merge upstream/master && git push
 cd ..
-git clone git@github.com:irr/programming-clojure.git
-cd programming-clojure
-git remote add upstream https://github.com/stuarthalloway/programming-clojure.git
-git fetch upstream && git merge upstream/master && git push
-cd ..
 git clone git@github.com:irr/http-kit.git
 cd http-kit
 git remote add upstream https://github.com/http-kit/http-kit.git
@@ -28,11 +23,12 @@ git fetch upstream && git merge upstream/master && git push
 cd ~/gitf
 ln -s /opt/java/github/vim-clojure-static
 ln -s /opt/java/github/ClojureProgramming
-ln -s /opt/java/github/programming-clojure
 ln -s /opt/java/github/http-kit
 cd
-mkdir -p ~/.vim/autoload ~/.vim/bundle
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+if [ ! -d "~/.vim/bundle" ]; then
+    mkdir -p ~/.vim/autoload ~/.vim/bundle
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
 cd ~/.vim/bundle
 rm -rf vim-clojure-static; ln -s /opt/java/github/vim-clojure-static
 cd
