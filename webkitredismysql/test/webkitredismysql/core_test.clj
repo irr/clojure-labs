@@ -1,4 +1,4 @@
-(ns webkitredis.core-test
+(ns webkitredismysql.core-test
   (:require [clojure.test :refer :all]
             [webkitredis.core :refer :all]))
 
