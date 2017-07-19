@@ -6,5 +6,5 @@ aws lambda create-function \
   --runtime java8 \
   --memory 512 \
   --timeout 60 \
-  --role arn:aws:iam::940851196820:role/lambda_pushManager \
+  --role arn:aws:iam::940851196820:role/clj-demo \
   --zip-file fileb://./target/my-lambda-project.jar
