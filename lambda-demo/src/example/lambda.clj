@@ -1,4 +1,3 @@
-
 (ns example.lambda
   (:require [uswitch.lambada.core :refer [deflambdafn]]
             [clojure.data.json :as json]
